@@ -15,16 +15,36 @@
 
 .input-row {
   display: flex;
-  border-radius: 5px;
   border: 1px solid var(--slate700);
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .input-row div {
   background-color: var(--slate100);
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 8px;
+  font-size: 15px;
+  color: var(--slate900);
 }
 
 .input-row input {
   width: 100%;
+  padding: 8px;
+  outline: none;
+  font-size: 15px;
+  border: none;
+  color: var(--slate700);
+  transition: background-color 0.3s ease;
+}
+
+.input-row:has(input:focus) {
+  border-color: var(--lime);
+}
+
+input:focus + div {
+  background-color: var(--lime);
 }
 
 .container {
@@ -39,4 +59,28 @@
 
 .none {
   display: none;
+}
+
+.result {
+  background-color: var(--slate700);
+  color: var(--slate100);
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--lime);
+  color: var(--slate900);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.empty-state p {
+  text-align: center;
+  color: var(--slate100);
 }
