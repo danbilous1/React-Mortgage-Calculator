@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Input from "./components/Input";
 import RadioInput from "./components/RadioInput";
+import EmptyResult from "./components/EmptyResult";
 
 function App() {
   const [term, setTerm] = useState(0);
@@ -35,9 +36,10 @@ function App() {
     <div
       style={{
         display: "flex",
-        width: "100%",
+        width: "900px",
         borderRadius: "25px",
         overflow: "hidden",
+        marginLeft: "calc(50vw - 450px)",
       }}
     >
       <div
@@ -46,7 +48,7 @@ function App() {
           flexDirection: "column",
           gap: "20px",
           width: "100%",
-          padding: "20px",
+          padding: "40px",
           borderRadius: "8px",
           backgroundColor: "#f9f9f9",
         }}
@@ -138,19 +140,20 @@ function App() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          width: "50%",
+          width: "100%",
           fontSize: "24px",
           fontWeight: "bold",
           color: "white",
-          borderRadius: "0px 0px 0px 50px",
+          borderRadius: "0px 0px 0px 70px",
           padding: "20px",
           backgroundColor: "var(--slate900)",
         }}
       >
-        ${payment.toFixed(2)}
+        {payment ? <div>${payment.toFixed(2)}</div> : <EmptyResult />}
       </div>
     </div>
   );
 }
 
 export default App;
+
