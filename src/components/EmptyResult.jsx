@@ -1,6 +1,9 @@
 function EmptyResult() {
   return (
-    <div className="empty-state">
+    <div
+      className="empty-state"
+      style={{ textAlign: "center", padding: "10px" }}
+    >
       <img src="./illustration-empty.svg" />
       <h2>Results shown here</h2>
       <p>
