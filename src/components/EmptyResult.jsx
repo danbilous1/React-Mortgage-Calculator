@@ -9,8 +9,10 @@ function EmptyResult() {
         alt="Empty illustration"
         style={{ width: "150px", marginBottom: "20px" }}
       />
-      <h2>Results shown here</h2>
-      <p>
+      <h2 style={{ fontSize: "18px", color: "var(--textColorPrimary)" }}>
+        Results shown here
+      </h2>
+      <p style={{ fontSize: "14px", color: "var(--textColorSecondary)" }}>
         Complete the form and click "calculate repayments" to see what your
         monthly payments would be.
       </p>
