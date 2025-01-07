@@ -13,6 +13,10 @@
   flex-direction: column;
 }
 
+body {
+  background-color: var(--slate100);
+}
+
 .input-row {
   display: flex;
   border: 1px solid var(--slate700);
