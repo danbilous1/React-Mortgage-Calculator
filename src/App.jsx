@@ -40,6 +40,7 @@ function App() {
         borderRadius: "25px",
         overflow: "hidden",
         marginLeft: "calc(50vw - 450px)",
+        boxShadow: "0px 15px 50px rgba(0, 0, 0, 0.15)",
       }}
     >
       <div
